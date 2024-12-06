@@ -1,69 +1,55 @@
-### ImageDownloaderFrom - URL Script
+# ImageDownloaderFrom-URL
 
-#### Overview
-This script allows you to download images from a list of URLs and save them to a specified folder on your local machine. It is simple, lightweight, and easy to use for batch downloading images from the web.
+This Python script downloads images from a list of URLs and saves them to a specified folder. It includes error handling, URL validation, and logging.
 
----
+## Features
 
-#### Requirements
-Before running the script, ensure you have the following installed:
-- **Python 3.6 or higher**
-- **`requests` library**  
-  Install it using:  
-  ```bash
-  pip install requests
-  ```
+- Downloads images from a list of URLs.
+- Saves images to a specified folder.
+- Validates URLs before downloading.
+- Logs download progress and errors.
+- Adds a user-agent header to requests.
+- Includes a timeout for requests to avoid hanging indefinitely.
 
----
+## Requirements
 
-#### How It Works
-1. **Define the URL list:**  
-   Add the image URLs you want to download to the `urls` list in the script. Example:  
-   ```python
-   urls = [
-       "https://example.com/image1.jpg",
-       "https://example.com/image2.jpg"
-   ]
-   ```
+- Python 3.x
+- `requests` library
 
-2. **Create an output folder:**  
-   The script automatically creates a folder named `images` (or another folder name you specify) to store the downloaded images.
+## Installation
 
-3. **Download images:**  
-   The script iterates over the URL list, downloads each image, and saves it with a filename in the format `image_1.jpg`, `image_2.jpg`, etc.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/imagedownloader.git
+    cd imagedownloader
+    ```
 
-4. **Error handling:**  
-   If a URL is invalid or the download fails, the script logs an error message without stopping the entire process.
+2. Install the required libraries:
+    ```sh
+    pip install requests
+    ```
 
----
+## Usage
 
-#### How to Run
-1. Clone or download the script to your machine.
-2. Update the `urls` list in the script with the image URLs you want to download.
-3. Run the script using Python:
-   ```bash
-   python script_name.py
-   ```
-4. The downloaded images will be saved in the `images` folder.
+1. Update the `urls` list in the script with the URLs of the images you want to download.
 
----
+2. Run the script:
+    ```sh
+    python download_images.py
+    ```
 
-#### Notes
-- Ensure the URLs in the list point to valid image files (e.g., `.jpg`, `.png`).
-- You can customize the output folder by changing the value of `output_folder` in the script.
+## Code Explanation
 
----
+The script performs the following steps:
 
-#### Example Output
-```
-Downloaded: images/image_1.jpg
-Downloaded: images/image_2.jpg
-Error: https://invalid-url.com not downloaded. Reason: 404 Client Error: Not Found for url: https://invalid-url.com
-```
+1. Configures logging to display download progress and errors.
+2. Defines a list of image URLs to download.
+3. Creates an output folder to save the downloaded images.
+4. Validates each URL before attempting to download.
+5. Downloads each image and saves it with an appropriate filename and extension.
+6. Logs the success or failure of each download.
+7. 
 
-This output shows which images were successfully downloaded and highlights any errors encountered during the process.
+## Disclaimer
 
----
-
-#### Disclaimer
 Use this script responsibly. Make sure you have permission to download images from the provided URLs.
