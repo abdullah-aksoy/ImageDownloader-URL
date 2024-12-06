@@ -20,8 +20,9 @@ This Python script downloads images from a list of URLs and saves them to a spec
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/imagedownloader.git
-    cd imagedownloader
+    git clone https://github.com/yourusername/ImageDownloader-URL
+    cd ImageDownloader-URL
+
     ```
 
 2. Install the required libraries:
